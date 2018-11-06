@@ -1,7 +1,15 @@
 # Common settings
 include Makefile.settings
 
+.PHONY: all install unit-test
+
 install:
 	${INFO} "Installing Dependencies"
-	$(shell npm --prefix ./swagger_ui install ./swagger_ui)
-	$(shell npm --prefix ./swagger_json_fetcher install ./swagger_json_fetcher)
+	cd swagger_ui && npm install
+	cd swagger_json_fetcher && npm install
+
+unit-test:
+	${INFO} "Running Unit Tests"
+	cd swagger_ui && npm run test
+
+all: install unit-test

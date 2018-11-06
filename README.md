@@ -42,8 +42,7 @@ If the previous command ran successfully you should now be able to hit the follo
 We use `mocha` for testing our code and it is already added in `package.json` under `scripts`, so that we can simply run the following command to run our tests:
 
 ```bash
-chmod +x testing_all_functions.sh
-./testing_all_functions.sh
+make test
 ```
 
 # Appendix
