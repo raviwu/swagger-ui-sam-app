@@ -1,10 +1,10 @@
 {
-  "name": "hello_world",
+  "name": "swagger_ui",
   "version": "1.0.0",
-  "description": "hello world sample for NodeJS",
-  "main": "src/index.js",
-  "repository": "https://github.com/awslabs/aws-sam-cli/tree/develop/samcli/local/init/templates/cookiecutter-aws-sam-hello-nodejs",
-  "author": "SAM CLI",
+  "description": "swagger ui SAM sample for NodeJS",
+  "main": "app.js",
+  "repository": "https://github.com/raviwu/swagger-ui-sam-app",
+  "author": "Ravi Wu",
   "license": "MIT",
   "dependencies": {
     "aws-sdk": "^2.348.0",
