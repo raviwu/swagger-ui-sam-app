@@ -2,9 +2,18 @@
 
 const app = require('../../app.js');
 const chai = require('chai');
+
 const expect = chai.expect;
 var event, context;
 
+const AWS = require('aws-sdk');
+const sinon = require('sinon');
+const jsonResponse = require('../fixtures/ListObjectsResponse.json')
+
+const stub = sinon.stub(AWS.Service.prototype, 'makeRequest');
+
+stub.withArgs('listObjects', sinon.match.any, sinon.match.any)
+    .returns({ promise: () => jsonResponse });
 
 describe('Tests index', function () {
     it('verifies successful response', async () => {
@@ -16,7 +25,6 @@ describe('Tests index', function () {
 
         let response = result.body;
 
-        expect(response).to.be.contains('Swagger');
+        expect(response).to.be.contains('uber-sample.json');
     });
 });
-
