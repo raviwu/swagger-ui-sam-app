@@ -22,7 +22,7 @@ exports.lambdaHandler = async (event, context) => {
 
         let swaggerSource = s3BucketFiles.Contents.filter(object => object.Size > 0).map(object => {
             let fileName = object.Key.split('/')[1];
-            return { name: fileName, url: `/jsonFiles/${fileName}` };
+            return { name: fileName, url: `/${event.requestContext.stage}/jsonFiles/${fileName}` };
         });
 
         html = ejs.render(templateString, {

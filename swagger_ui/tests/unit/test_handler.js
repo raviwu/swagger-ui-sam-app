@@ -4,7 +4,8 @@ const app = require('../../app.js');
 const chai = require('chai');
 
 const expect = chai.expect;
-var event, context;
+var context;
+var event = { requestContext: { stage: 'Test' } };
 
 const AWS = require('aws-sdk');
 const sinon = require('sinon');
