@@ -17,8 +17,6 @@ The fetcher will dymanically consume the resources in `S3`.
 
 ### Installing dependencies
 
-In this example we use `npm` but you can use `yarn` if you prefer to manage NodeJS dependencies:
-
 ```bash
 make install
 ```
@@ -39,10 +37,8 @@ If the previous command ran successfully you should now be able to hit the follo
 
 ## Testing
 
-We use `mocha` for testing our code and it is already added in `package.json` under `scripts`, so that we can simply run the following command to run our tests:
-
 ```bash
-make test
+make unit-test
 ```
 
 # Appendix
