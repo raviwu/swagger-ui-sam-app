@@ -13,14 +13,12 @@ let response;
 
 exports.lambdaHandler = async (event, context) => {
     try {
-        const params = {
-            Bucket: bucketName, /* required */
+        const s3BucketFiles = await s3.listObjects({
+            Bucket: bucketName,
             Prefix: path
-        };
-
-        const s3BucketFiles = await s3.listObjects(params, function(err, data) {
-            if (err) console.log(err, err.stack); // an error occurred
-        }).promise();
+        }, function(err, data) {
+            if (err) console.log(err, err.stack);
+            }).promise();
 
         let swaggerSource = s3BucketFiles.Contents.filter(object => object.Size > 0).map(object => {
             let fileName = object.Key.split('/')[1];

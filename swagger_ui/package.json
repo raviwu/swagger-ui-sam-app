@@ -1,20 +1,21 @@
 {
-  "name": "swagger_ui",
-  "version": "1.0.0",
-  "description": "swagger ui SAM sample for NodeJS",
-  "main": "app.js",
-  "repository": "https://github.com/raviwu/swagger-ui-sam-app",
-  "author": "Ravi Wu",
-  "license": "MIT",
-  "dependencies": {
-    "aws-sdk": "^2.348.0",
-    "ejs": "^2.6.1"
-  },
-  "scripts": {
-    "test": "mocha tests/unit/"
-  },
-  "devDependencies": {
-    "chai": "^4.1.2",
-    "mocha": "^5.1.1"
-  }
+    "name": "swagger_ui",
+    "version": "1.0.0",
+    "description": "Swagger UI sample for NodeJS",
+    "main": "app.js",
+    "repository": "https://github.com/raviwu/swagger-ui-sam-app",
+    "author": "Ravi Wu",
+    "license": "MIT",
+    "dependencies": {
+        "aws-sdk": "^2.348.0",
+        "ejs": "^2.6.1"
+    },
+    "scripts": {
+        "test": "mocha tests/unit/"
+    },
+    "devDependencies": {
+        "chai": "^4.1.2",
+        "mocha": "^5.1.1",
+        "sinon": "^7.1.1"
+    }
 }

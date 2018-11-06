@@ -1,0 +1,25 @@
+{
+    "IsTruncated": false,
+    "Marker": "",
+    "Contents": [
+        {
+            "Key": "api-docs/",
+            "LastModified": "2018-11-05T05:59:48.000Z",
+            "ETag": "\"d41d8cd98f00b204e9800998ecf8427e\"",
+            "Size": 0,
+            "StorageClass": "STANDARD",
+            "Owner": {} },
+        {
+            "Key": "api-docs/uber-sample.json",
+            "LastModified": "2018-11-05T05:59:48.000Z",
+            "ETag": "\"d41d8cd98f00b204e9800998ecf8427e\"",
+            "Size": 3214,
+            "StorageClass": "STANDARD",
+            "Owner": {}
+        }
+    ],
+    "Name": "test-swagger-ui-bucket",
+    "Prefix": "api-docs",
+    "MaxKeys": 1000,
+    "CommonPrefixes": []
+}
