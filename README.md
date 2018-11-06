@@ -20,8 +20,7 @@ The fetcher will dymanically consume the resources in `S3`.
 In this example we use `npm` but you can use `yarn` if you prefer to manage NodeJS dependencies:
 
 ```bash
-chmod +x dependencies_installation.sh
-./dependencies_installation.sh
+make install
 ```
 
 ### Local development
