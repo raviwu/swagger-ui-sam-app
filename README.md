@@ -51,16 +51,15 @@ AWS CLI commands to package, deploy and describe outputs defined within the clou
 sam package \
     --template-file template.yaml \
     --output-template-file packaged.yaml \
-    --s3-bucket REPLACE_THIS_WITH_YOUR_S3_BUCKET_NAME
+    --s3-bucket BUCKET_NAME
 
 sam deploy \
     --template-file packaged.yaml \
-    --stack-name sam-app \
-    --capabilities CAPABILITY_IAM \
-    --parameter-overrides MyParameterSample=MySampleValue
+    --stack-name STACK_NAME \
+    --capabilities CAPABILITY_IAM
 
 aws cloudformation describe-stacks \
-    --stack-name sam-app --query 'Stacks[].Outputs'
+    --stack-name STACK_NAME --query 'Stacks[].Outputs'
 ```
 
 **NOTE**: Alternatively this could be part of package.json scripts section.

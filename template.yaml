@@ -21,6 +21,8 @@ Resources:
                     Properties:
                         Path: /doc
                         Method: get
+            Policies:
+                - AmazonS3FullAccess
 
     SwaggerJsonFetcherFunction:
         Type: AWS::Serverless::Function
@@ -34,20 +36,19 @@ Resources:
                     Properties:
                         Path: /jsonFiles/{fileName}
                         Method: get
+            Policies:
+                - AmazonS3FullAccess
 
 Outputs:
     SwaggerUiApi:
         Description: "API Gateway endpoint URL for Prod stage for Hello World function"
-        Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Dev/doc/"
+        Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Stag/doc/"
     SwaggerUiFunction:
         Description: "Swagger UI Lambda Function ARN"
         Value: !GetAtt SwaggerUiFunction.Arn
     SwaggerJsonFetcherApi:
         Description: "API Gateway endpoint URL for Prod stage for SwaggerJsonFetcher function"
-        Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Dev/doc/"
+        Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Stag/doc/"
     SwaggerJsonFetcherFunction:
         Description: "Swagger Json Fetcher Lambda Function ARN"
         Value: !GetAtt SwaggerJsonFetcherFunction.Arn
-    SwaggerUiHostIamRole:
-        Description: "Implicit IAM Role created for Swagger UI function"
-        Value: !GetAtt SwaggerUiHostIamRole.Arn
