@@ -1,7 +1,10 @@
 # Common settings
 include Makefile.settings
 
-.PHONY: all install unit-test
+.PHONY: all install unit-test start
+
+start:
+	sam local start-api
 
 install:
 	${INFO} "Installing Dependencies"

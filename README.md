@@ -28,7 +28,7 @@ make install
 **Invoking function locally through local API Gateway**
 
 ```bash
-sam local start-api
+make start
 ```
 
 If the previous command ran successfully you should now be able to hit the following local endpoint to invoke your function `http://localhost:3000/doc`
