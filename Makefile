@@ -14,5 +14,6 @@ install:
 unit-test:
 	${INFO} "Running Unit Tests"
 	cd swagger_ui && npm run test
+	cd swagger_json_fetcher && npm run test
 
 all: install unit-test

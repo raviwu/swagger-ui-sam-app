@@ -8,5 +8,13 @@
   "license": "MIT",
   "dependencies": {
     "aws-sdk": "^2.348.0"
+  },
+  "scripts": {
+    "test": "mocha tests/unit/"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.1.1",
+    "sinon": "^7.1.1"
   }
 }
